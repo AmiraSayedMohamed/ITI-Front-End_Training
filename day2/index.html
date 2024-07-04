@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .container .full-width {
+            grid-column: span 4;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 150px;
+        }
+        audio, video {
+            width: 100%;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 5px;
+            font-size: 1em;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task2</h1>
+    <div class="container">
+        <div class="box">
+            <p>This is paragraph one</p>
+            <p>This is paragraph two</p>
+        </div>
+        <div class="box">
+            <img src="https://user-images.githubusercontent.com/30186107/29488525-f55a69d0-84da-11e7-8a39-5476f663b5eb.png" alt="HTML CSS Image" width =100>
+        </div>
+        <div class="box">
+            <iframe src="https://en.wikipedia.org/wiki/Main_Page" title="Wikipedia"></iframe>
+        </div>
+        <div class="box">
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="box full-width">
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <form class="form-container" action="thankyou.html" method="GET">
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Password Again:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat your password">
+        </div>
+        <div class="form-group">
+            <label for="file">Choose File:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="faculty">Choose Faculty:</label>
+            <select id="faculty" name="faculty">
+                <option value="computer-science">Computer Science</option>
+                <option value="engineering">Engineering</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Interested:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interested" value="football"> Football</label>
+                <label><input type="checkbox" name="interested" value="reading"> Reading</label>
+                <label><input type="checkbox" name="interested" value="diving"> Diving</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="about">About Me:</label>
+            <textarea id="about" name="about" rows="4" placeholder="Tell us about yourself"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
+
