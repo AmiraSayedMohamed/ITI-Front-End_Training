@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.letter {
+    display: inline-block;
+    width: calc(100% / 8);
+    height: 100px;
+    line-height: 100px; /* Vertically center text */
+    font-size: 4rem;
+    transition: background-color 0.5s, color 0.5s; /* Add transition for background and text color */
+}
+
+.letter.black {
+    background-color: black;
+    color: white;
+}
+
+.letter:not(.black) {
+    background-color: white;
+    color: black;
+}
+
+.letter:hover {
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+.letter.black:hover {
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+.letter:hover {
+    background-color: black; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.table-container {
+    width: 100%;
+    background: linear-gradient(to right, #ff00cc, #333399); /* Gradient background */
+    padding: 20px 0; /* Padding to give space around the table */
+    transition: background-color 0.5s; /* Add transition for background color */
+}
+
+.table-container:hover {
+    background-color: #555; /* Darken background on hover */
+}
+
+table {
+    width: 80%;
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    transition: background-color 0.5s, color 0.5s; /* Add transition for background and text color */
+}
+
+th {
+    padding: 12px 16px; /* Adjusted padding for cells */
+    text-align: left;
+    background-color: rgb(88, 9, 81); /* Initial background color */
+    color: black; /* Initial text color */
+}
+td {
+    padding: 12px 16px; /* Adjusted padding for cells */
+    text-align: left;
+    background-color: white; /* Initial background color */
+    color: black; /* Initial text color */
+}
+
+th:hover {
+    background-color: #481a4a;
+}
+td:hover {
+    background-color: #ddd; /* Lighten background on hover */
+}
+
+.image-container {
+    display: block;
+    background-size: cover;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.img1:hover{
+    filter: blur(18px);
+    border-radius: 50%;
+    transition: all, 0,8s, ease;
+}
+.img2:hover{
+    filter: brightness(0.3);
+    border-radius: 50%;
+    transition: all, 0.8s, ease;
+}
+
+.img3:hover{
+    filter: contrast(0.8);
+    border-radius: 50%;
+    transition: all, 0.8s, ease;
+}
+.img4:hover{
+    filter: grayscale(0.4);
+    border-radius: 50%;
+    transition: all, 0.8s, ease;
+}
+
+p{text-align: center;
+}
+
+p::selection{
+    background-color: #333399;
+    color: aliceblue;
+}
+
+
