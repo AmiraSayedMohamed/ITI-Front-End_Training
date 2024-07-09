@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.desert {
+    background-image: url('https://cdn.britannica.com/10/152310-050-5A09D74A/Sand-dunes-Sahara-Morocco-Merzouga.jpg');
+}
+
+.forest {
+    background-image: url('https://www.shutterstock.com/image-photo/aerial-top-view-forest-tree-260nw-2033096327.jpg');
+}
+
+.canyon {
+    background-image: url('https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}
+
+.glacier {
+    background-image: url('https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2021-04/210428-glacier-argentina-jm-1454-f68c32.jpg');
+}
+
+.word {
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 900;
+}
+
+.desert-text {
+    animation: moveUpDown 1s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+.forest-text {
+    animation: appearDisappear 1s infinite alternate;
+}
+
+@keyframes appearDisappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.canyon-text {
+    animation: rotateText 1s infinite linear;
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.glacier-text {
+    animation: scaleText 1s infinite alternate;
+}
+
+@keyframes scaleText {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
